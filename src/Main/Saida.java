@@ -11,6 +11,9 @@ class Saida {
         DecimalFormat df = new DecimalFormat("###,##0.00");
         System.out.println(msg + "=>" + df.format(num));
     }
+    public void imprimirNumeroInteiro(int num, String msg) {
+       System.out.println(msg + "=>" + num);
+    }
 
     public void imprimirAvisoString(String aviso) {
         System.out.println(aviso);
