@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Main;
 
 /**
@@ -15,18 +10,25 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
-        
+
+        Entrada entrada = new Entrada();
         //entrada de dados
-        int achico = 150;
-        int aBento = 110;
-        
-        
-        Processamento processamento = new Processamento();
-       int resposta = processamento.quantosAnos(achico,aBento);
-        
-       Saida saida = new Saida();
-        saida.imprimirNumeroInteiro(resposta, "Quantidade de anos");
+        int max = 5;
+        int maior = Integer.MIN_VALUE;
+        int menor = Integer.MAX_VALUE;
+        for (int i = 0; i < max; i++) {
+            int valor = entrada.lerNumeroInteiro("Digite um número");
+            if (valor > maior) {
+                maior = valor;
+            }
+            if (valor < menor) {
+                menor = valor;
+            }
+        }
+        //saida de dados   
+        Saida saida = new Saida();
+        saida.imprimirNumeroInteiro(maior, "Maior");
+        saida.imprimirNumeroInteiro(menor, "Menor");
     }
 
 }
