@@ -5,9 +5,10 @@ import java.text.DecimalFormat;
 
 class Saida {
 
-    public void imprimirNumeroDouble(String mensagem, double num) {
+   public void imprimirNumeroDouble(String msg,double num) {
+        //formata e imprime um número double
         DecimalFormat df = new DecimalFormat("###,##0.00");
-        System.out.println(mensagem + "=>" + df.format(num));
+        System.out.println(msg + " => " + df.format(num));
     }
 
     public void imprimirAvisoString(String aviso) {
