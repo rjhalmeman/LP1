@@ -7,14 +7,20 @@ public class Main {
 
     public static void main(String[] args) {
         Entrada entrada = new Entrada();
-        double a = entrada.lerNumeroDouble("Digite um valor para A");
-        double b = entrada.lerNumeroDouble("Digite um valor para B");
-
         Processamento processamento = new Processamento();
-        Double soma = processamento.getSoma(a, b);
-
         Saida saida = new Saida();
-        saida.imprimirNumeroDouble("Resultado da soma", soma);
+
+        //entrada de dados
+        double x1 = entrada.lerNumeroDouble("X1");
+        double y1 = entrada.lerNumeroDouble("Y1");
+        double x2 = entrada.lerNumeroDouble("X2");
+        double y2 = entrada.lerNumeroDouble("Y2");
+        
+        
+        Double d=processamento.getDistancia(x1,y1,x2,y2);
+        
+
+        saida.imprimirNumeroDouble("Distância", d);
 
     }
 
