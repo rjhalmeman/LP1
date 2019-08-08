@@ -14,4 +14,10 @@ class Saida {
     public void imprimirAvisoString(String aviso) {
         System.out.println(aviso);
     }
+
+    void imprimirNumeroInteiro(String msg,int numero) {
+        System.out.println(msg+"=>"+numero);
+    }
+
+    
 }
