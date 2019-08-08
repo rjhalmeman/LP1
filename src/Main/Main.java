@@ -7,14 +7,16 @@ public class Main {
 
     public static void main(String[] args) {
         Entrada entrada = new Entrada();
-        double a = entrada.lerNumeroDouble("Digite um valor para A");
-        double b = entrada.lerNumeroDouble("Digite um valor para B");
-
         Processamento processamento = new Processamento();
-        Double soma = processamento.getSoma(a, b);
-
         Saida saida = new Saida();
-        saida.imprimirNumeroDouble("Resultado da soma", soma);
+       
+        
+        double raio = entrada.lerNumeroDouble("Raio");
+        double altura = entrada.lerNumeroDouble("Altura");
+
+        double volume = processamento.calcularVolumeDoCilindro(raio,altura);
+
+        saida.imprimirNumeroDouble("O volume do cilindro é", volume);
 
     }
 

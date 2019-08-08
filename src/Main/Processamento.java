@@ -3,8 +3,10 @@ package Main;
 //@author Radames J Halmeman  - rjhalmeman@gmail.com
 class Processamento {
 
-    public Double getSoma(double a, double b) {
-        double resultado = a + b;
-        return resultado;
+    
+
+    double calcularVolumeDoCilindro(double raio, double altura) {
+        double volume = 3.14159 *raio*raio*altura;
+        return volume;
     }
 }
