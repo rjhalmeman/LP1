@@ -7,13 +7,17 @@ public class Main {
 
     public static void main(String[] args) {
         Entrada entrada = new Entrada();
+        Processamento processamento = new Processamento();
+        Saida saida = new Saida();
+        
+        //entrada
         double a = entrada.lerNumeroDouble("Digite um valor para A");
         double b = entrada.lerNumeroDouble("Digite um valor para B");
 
-        Processamento processamento = new Processamento();
+        //processamento
         Double soma = processamento.getSoma(a, b);
 
-        Saida saida = new Saida();
+        //saída
         saida.imprimirNumeroDouble("Resultado da soma", soma);
 
     }
