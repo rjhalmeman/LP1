@@ -11,14 +11,16 @@ public class Main {
         Saida saida = new Saida();
         
         //entrada
-        double a = entrada.lerNumeroDouble("Digite um valor para A");
-        double b = entrada.lerNumeroDouble("Digite um valor para B");
+        String s1 = entrada.lerString("Primeira string");
+        String s2 = entrada.lerString("Segunda string");
+        String s3 = entrada.lerString("Terceira string");
+       
 
         //processamento
-        Double soma = processamento.getSoma(a, b);
+        String resp = processamento.ordenarStrings(s1,s2,s3);
 
         //saída
-        saida.imprimirNumeroDouble("Resultado da soma", soma);
+        saida.imprimirRotuloEString("Strings ordenadas", resp);
 
     }
 
