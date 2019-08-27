@@ -1,7 +1,9 @@
 package Main;
 
 /**
- * @author Radames J Halmeman - rjhalmeman@gmail.com
+Escreva um programa que dado um valor numérico digitado pelo usuário (armazenado em uma 
+* variável inteira), imprima cada um dos seus dígitos por extenso. Exemplo: 
+* Entre o número: 4571 Resultado: quatro, cinco, sete, um.
  */
 public class Main {
 
@@ -10,15 +12,11 @@ public class Main {
         Processamento processamento = new Processamento();
         Saida saida = new Saida();
         
-        //entrada
-        double a = entrada.lerNumeroDouble("Digite um valor para A");
-        double b = entrada.lerNumeroDouble("Digite um valor para B");
-
-        //processamento
-        Double soma = processamento.getSoma(a, b);
-
-        //saída
-        saida.imprimirNumeroDouble("Resultado da soma", soma);
+        int n = entrada.lerNumeroInteiro("digite um número inteiro");
+        
+        String resposta = processamento.nomesDosDigitos(n);
+        
+        saida.imprimirRotuloEString("Números por extenso", resposta);
 
     }
 
