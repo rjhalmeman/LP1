@@ -3,20 +3,22 @@ package Main;
 //@author Radames J Halmeman  - rjhalmeman@gmail.com
 class Processamento {
 
-    int v[] ;
+    int[][] matriz ;
     int i = 0;
 
-    public Processamento(int tamanho) {
-        v = new int[tamanho];
+    public Processamento(int linhas, int colunas) {
+        matriz = new int[linhas][colunas];
     }    
     
-    public void adicionarElemento(int x) {
-        v[i] = x;
-        i++;
+    public void adicionarElemento(int x,int y,int valor) {
+        matriz[x][y] = valor;       
     }
     
-    public int getElemento(int posicao){
-        return v[posicao];
+    public int getElemento(int x,int y){
+        return matriz[x][y];
     }
 
+    public int[][] getMatriz(){
+        return matriz;
+    }
 }
