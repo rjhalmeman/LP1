@@ -16,9 +16,10 @@ public class Main {
 
         int linhas = entrada.lerNumeroInteiro("Quantas linhas");
         int colunas = entrada.lerNumeroInteiro("Quantas Colunas");
-
+       
         Processamento processamento = 
                 new Processamento(linhas,colunas);
+        
         Saida saida = new Saida();      
         
         for (int i = 0; i < linhas; i++) {
@@ -28,7 +29,8 @@ public class Main {
                 processamento.adicionarElemento(i, j, valor);
             }
         }
-
+        saida.imprimirVetor(processamento.getDiagonalPrincipal());
+        
         saida.imprimirMatriz(processamento.getMatriz());
     }
 
