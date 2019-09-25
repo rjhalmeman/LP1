@@ -15,10 +15,10 @@ class Saida {
         System.out.println(msg + ": " + s);
     }
 
-    public void imprimirMatriz(int matriz[][]) {
+    public void imprimirMatriz(String msg, int matriz[][]) {
         int linhas = matriz.length;
         int colunas = matriz[0].length;
-
+        System.out.println(msg);
         for (int i = 0; i < linhas; i++) {
             for (int j = 0; j < colunas; j++) {
                 System.out.print(matriz[i][j] + "  ");
@@ -27,7 +27,8 @@ class Saida {
         }
     }
 
-    public void imprimirVetor(int vetor[]) {
+    public void imprimirVetor(String msg, int vetor[]) {
+        System.out.println(msg);
         int linhas = vetor.length;
         for (int i = 0; i < linhas; i++) {
             System.out.println(vetor[i]);

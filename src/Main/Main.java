@@ -29,9 +29,9 @@ public class Main {
                 processamento.adicionarElemento(i, j, valor);
             }
         }
-        saida.imprimirVetor(processamento.getDiagonalPrincipal());
+        saida.imprimirVetor("Diagonal principal",processamento.getDiagonalPrincipal());
         
-        saida.imprimirMatriz(processamento.getMatriz());
+        saida.imprimirMatriz("Matriz completa",processamento.getMatriz());
     }
 
 }
