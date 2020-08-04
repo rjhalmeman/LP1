@@ -1,5 +1,6 @@
-
 package Main;
+
+import java.util.Scanner;
 
 /**
  *
@@ -11,17 +12,24 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
         Entrada entrada = new Entrada();
-        double a = entrada.lerNumeroDouble("Digite o primeiro número");
-        double b = entrada.lerNumeroDouble("Digite o segundo número");
+
+        String s1;
+
+        s1 = entrada.lerString("Digite uma string");
+        s1 = s1.toLowerCase();
         
+        s1 = s1.replace("ar", "XY");
         
-        Processamento processamento = new Processamento();
-        double s = processamento.somarDoisNumeros(a, b);
+        String s2 = "aaa;bbb;cccc;ddddddddd;ee;ii";
+        String [] s3 = s2.split(";");
+        for (int i = 0; i < s3.length; i++) {
+            System.out.println(s3[i]);
+        }
         
-        
-        Saida saida = new Saida();
-        saida.imprimirNumeroDouble("A soma é", s);
+        System.out.println("s1 " + s1);
+
     }
-    
+
 }
