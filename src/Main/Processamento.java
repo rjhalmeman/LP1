@@ -11,8 +11,5 @@ class Processamento {
         return soma;
     }
 
-    public double somarDoisNumeros(double a, double b) {
-        double soma = a + b;
-        return soma;
-    }
+   
 }
