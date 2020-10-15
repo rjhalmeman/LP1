@@ -40,6 +40,7 @@ class Entrada {
 
     public String lerString(String msg) {
         //evita que o usuário deixe a string vazia
+        teclado = new Scanner(System.in);
         while (true) {
             try {
                 System.out.print(msg + " =>");
@@ -57,6 +58,7 @@ class Entrada {
 
     public boolean lerConfirmacao(String msg) {
         //ler uma resposta sim ou não do usuário
+        teclado = new Scanner(System.in);
         while (true) {
             try {
                 System.out.print(msg + " (S ou N) ");
